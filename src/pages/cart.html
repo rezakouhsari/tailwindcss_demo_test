@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبد خرید</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="dark:bg-bg_dark1">
+
+    <div class="loader fixed w-full h-screen bg-[rgba(0,0,0,0.3)] z-50 flex 
+    justify-center items-center">
+        <div class="bg-white rounded-lg flex flex-col 
+        justify-center items-center px-12 py-6">
+            <img src="../res/login/full-vertical.svg" width="100" alt="" class="my-4">
+            <div class="h-[20px] [&>*]:size-3 [&>*]:rounded-full
+                 [&>*]:bg-rose-600 flex items-center gap-3">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="switchMode" class="fixed bottom-5 cursor-pointer right-5 size-12
+    bg-rose-500 rounded-full flex justify-center items-center z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="currentColor" class="bi bi-square-half text-white" viewBox="0 0 16 16">
+            <path d="M8 15V1h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1zm6 1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+        </svg>
+    </div>
+
+    <!-- top header -->
+    <div class="w-full h-[60px] hidden lg:flex">
+      <img
+        src="../res//main_page/fa39599ce966e4e981fbe9c44604a272c1ccc96e_1719066045.gif"
+        class="w-full h-full object-cover"
+        alt=""
+      />
+    </div>
+    <!-- top header -->
+
+    <!-- header -->
+
+    <div class="w-full pt-4 lg:flex flex-col hidden dark:bg-bg_dark1 dark:text-white">
+      <div class="w-full px-5 bg-white flex items-center justify-between dark:bg-bg_dark1 dark:text-white">
+          <div class="w-auto flex">
+              <img src="../res/main_page/full-horizontal.svg" width="195" height="30" alt="" />
+              <div class="w-[600px] h-[44px] bg-gray_light rounded-lg mx-4 font-iran_Light py-1 
+                  px-2 flex-grow flex relative dark:text-bg_dark1">
+                  <svg class="bi bi-search absolute top-[14px] right-4" xmlns="http://www.w3.org/2000/svg" width="18"
+                      height="18" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                  </svg>
+                  <input type="text" placeholder="جستجو" class="w-full outline-none bg-transparent py-2 px-11
+               placeholder:text-bg_dark1" name="" id="">
+              </div>
+          </div>
+
+
+          <div class="w-auto flex justify-end items-center px-2">
+            <button class="relative flex justify-center items-center gap-1 font-iran_Medium">
+              <span class="w-full h-full absolute top-0 right-0 z-50 dropDownBtn"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="dropDownBtn bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="dropDownBtn bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+              <span class="dropDownContent hidden w-[250px] h-auto bg-white border border-slate-100 
+              shadow-[1px_1px_3px_0px_rgba(0,0,0,0.2)] rounded-md absolute left-0 py-2 top-8 flex z-50">
+                <ul class="w-full flex flex-col justify-center items-start text-sm">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  w-full text-slate-800">
+                    <span>رضا کوهساری</span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                       class="bi bi-chevron-left stroke-1 stroke-slate-700" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                      </svg>
+                    </span>
+                  </li>
+                  <hr class="w-[90%] mx-auto text-slate-300">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  hover:bg-slate-100 w-full text-slate-800">
+                  <div class="flex items-center gap-2">
+                  <img src="../res/cart/club-point.svg" width="24" height="24" alt="">
+                  <h3>دیجی کلاب</h3>  
+                  </div>
+                  <div>
+                    <span>0</span>
+                    <span class="text-xs text-slate-500">امتیاز</span>
+                  </div>
+                  </li>
+                  <hr class="w-[90%] mx-auto text-slate-300">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  hover:bg-slate-100 w-full text-slate-800">
+                  <span class="flex gap-2 text-slate-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                     fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                      <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                    </svg>
+                    <span>پلاس</span>
+                  </span>
+
+                  <div class="flex items-center gap-1 text-[10px] text-purple-700">
+                    <span>خرید اشتراک</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                     class="bi bi-chevron-left stroke-1 stroke-purple-700" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                  </div>
+                    
+                  </li>
+                  <hr class="w-[90%] mx-auto text-slate-300">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  hover:bg-slate-100 w-full text-slate-800">
+                  <span class="flex gap-2 text-slate-800 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
+                      <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z"/>
+                    </svg>
+                    <span>سفارش ها</span>
+                  </span>
+                  </li>
+                  <hr class="w-[90%] mx-auto text-slate-300">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  hover:bg-slate-100 w-full text-slate-800">
+                  <span class="flex gap-2 items-center text-slate-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                    </svg>
+                    <span>لیست ها</span>
+                  </span>
+                  </li>
+                  <hr class="w-[90%] mx-auto text-slate-300">
+                  <li class="flex justify-between items-center gap-2 p-4 
+                  hover:bg-slate-100 w-full text-slate-800">
+                  <span class="flex gap-2 items-center text-slate-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                    </svg>
+                    <span>پیام ها</span>
+                  </span>
+                  <span class="bg-main_digikala text-white p-1 rounded-md size-5 flex items-center
+                  justify-center text-xs">2</span>
+                  </li>
+                </ul>
+              </span>  
+            </button>
+              <span class="mx-4 text-lg text-gray">|</span>
+              <svg style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                  fill="currentColor" class="bi bi-cart cursor-pointer" viewBox="0 0 16 16">
+                  <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+              </svg>
+          </div>
+
+      </div>
+
+      <!-- nav -->
+
+      <div
+          class="shadow-[0_2px_1px_0_#eee] dark:shadow-none font-iran_Light text-xs flex justify-between mx-auto w-full mt-7 px-5">
+
+          <div class="flex justify-start items-center relative">
+              <ul class="h-full">
+                  <li id="list_categories" class="flex h-full justify-center items-center font-iran_Bold gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                          class="bi bi-list" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                      </svg>
+                      <a href="" class="cursor-pointer">دسته بندی کالاها</a>
+
+                      <!-- mega_menu -->
+                      <div id="mega_menu" class="hidden" style="z-index: 1000 !important;">
+                          <div id="menu_bg_dark" class="w-screen h-screen bg-menu_bg_dark absolute top-8 left-0 
+                          -right-5"></div>
+
+                          <div class="mt-[5px] h-[500px] bg-white absolute top-7 
+                          right-0 shadow-[0_3px_6px_0_rgba(0,0,0,0.5)] rounded-b-xl flex overflow-hidden w-auto">
+
+                              <div dir="ltr" class="w-[180px] bg-white dark:bg-bg_dark1 dark:text-bg_dark1 h-full overflow-y-scroll">
+                                  <ul id="side_menu" dir="rtl"
+                                      class="w-full h-auto flex-col justify-start items-center">
+                                      <li data-time="1" class="flex justify-start items-center h-full w-full text-main_digikala">
+                                          <a href="" class="w-full flex justify-start items-center h-full py-4 pr-4 pl-3 
+                                          gap-2">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                  fill="currentColor" class="bi bi-ladder stroke-[0.4px]"
+                                                  viewBox="0 0 16 16">
+                                                  <path
+                                                      d="M4.5 1a.5.5 0 0 1 .5.5V2h6v-.5a.5.5 0 0 1 1 0v14a.5.5 0 0 1-1 0V15H5v.5a.5.5 0 0 1-1 0v-14a.5.5 0 0 1 .5-.5M5 14h6v-2H5zm0-3h6V9H5zm0-3h6V6H5zm0-3h6V3H5z" />
+                                              </svg>
+                                              <span>موبایل</span>
+                                          </a>
+                                      </li>
+                                      <li data-time="2"
+                                          class="flex justify-start items-center h-full w-full bg-slate-200">
+                                          <a href="" class="w-full flex justify-start items-center h-full py-4 pr-4 pl-3 
+                                          gap-2">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                  fill="currentColor" class="bi bi-ladder stroke-[0.4px]"
+                                                  viewBox="0 0 16 16">
+                                                  <path
+                                                      d="M4.5 1a.5.5 0 0 1 .5.5V2h6v-.5a.5.5 0 0 1 1 0v14a.5.5 0 0 1-1 0V15H5v.5a.5.5 0 0 1-1 0v-14a.5.5 0 0 1 .5-.5M5 14h6v-2H5zm0-3h6V9H5zm0-3h6V6H5zm0-3h6V3H5z" />
+                                              </svg>
+                                              <span>موبایل</span>
+                                          </a>
+                                      </li>
+                                      <li data-time="3"
+                                          class="flex justify-start items-center h-full w-full bg-slate-200">
+                                          <a href="" class="w-full flex justify-start items-center h-full py-4 pr-4 pl-3 
+                                          gap-2">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                  fill="currentColor" class="bi bi-ladder stroke-[0.4px]"
+                                                  viewBox="0 0 16 16">
+                                                  <path
+                                                      d="M4.5 1a.5.5 0 0 1 .5.5V2h6v-.5a.5.5 0 0 1 1 0v14a.5.5 0 0 1-1 0V15H5v.5a.5.5 0 0 1-1 0v-14a.5.5 0 0 1 .5-.5M5 14h6v-2H5zm0-3h6V9H5zm0-3h6V6H5zm0-3h6V3H5z" />
+                                              </svg>
+                                              <span>موبایل</span>
+                                          </a>
+                                      </li>
+                                      <li data-time="4"
+                                          class="flex justify-start items-center h-full w-full bg-slate-200">
+                                          <a href="" class="w-full flex justify-start items-center h-full py-4 pr-4 pl-3 
+                                          gap-2">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                  fill="currentColor" class="bi bi-ladder stroke-[0.4px]"
+                                                  viewBox="0 0 16 16">
+                                                  <path
+                                                      d="M4.5 1a.5.5 0 0 1 .5.5V2h6v-.5a.5.5 0 0 1 1 0v14a.5.5 0 0 1-1 0V15H5v.5a.5.5 0 0 1-1 0v-14a.5.5 0 0 1 .5-.5M5 14h6v-2H5zm0-3h6V9H5zm0-3h6V6H5zm0-3h6V3H5z" />
+                                              </svg>
+                                              <span>موبایل</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+
+                              <div id="main_menu" dir="ltr" class="overflow-y-scroll flex-col w-auto
+                               bg-white dark:bg-bg_dark2">
+
+                                  <div data-time="1" dir="ltr" class=" w-auto pt-4 flex-col">
+                                      <a dir="rtl" href="" class="flex  text-blue-700 py-3 pr-5 items-center gap-2">
+                                          <span class="font-iran_Bold text-nowrap text-[12px]
+                                            ">برندهای مختلف گوشی
+                                              موبایل</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                              fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd"
+                                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                          </svg>
+                                      </a>
+                                      <div dir="rtl" class="flex ">
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div data-time="2" dir="ltr" class=" w-auto pt-4 hidden">
+                                      <a dir="rtl" href="" class="flex  text-blue-700 py-3 pr-5 items-center gap-2">
+                                          <span class="font-iran_Bold text-nowrap text-[12px]
+                                            ">برندهای مختلف گوشی
+                                              موبایل</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                              fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd"
+                                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                          </svg>
+                                      </a>
+                                      <div dir="rtl" class="flex ">
+
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div data-time="3" dir="ltr" class=" w-auto pt-4 hidden">
+                                      <a dir="rtl" href="" class="flex  text-blue-700 py-3 pr-5 items-center gap-2">
+                                          <span class="font-iran_Bold text-nowrap text-[12px]
+                                            ">برندهای مختلف گوشی
+                                              موبایل</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                              fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd"
+                                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                          </svg>
+                                      </a>
+                                      <div dir="rtl" class="flex ">
+
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div data-time="4" dir="ltr" class=" w-auto pt-4 hidden">
+                                      <a dir="rtl" href="" class="flex  text-blue-700 py-3 pr-5 items-center gap-2">
+                                          <span class="font-iran_Bold text-nowrap text-[12px]
+                                            ">برندهای مختلف گوشی
+                                              موبایل</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                              fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd"
+                                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                          </svg>
+                                      </a>
+                                      <div dir="rtl" class="flex ">
+
+                                          <div class="mx-8">
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                              <div class="mt-8">
+                                                  <div class="flex items-center gap-3 hover:text-main_digikala">
+                                                      <a href="" class="font-iran_Bold text-nowrap text-[12px] border-r-2
+                                                       border-[#f00] pr-3">برندهای مختلف گوشی
+                                                          موبایل</a>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                          fill="currentColor" class="bi bi-chevron-left"
+                                                          viewBox="0 0 16 16">
+                                                          <path fill-rule="evenodd"
+                                                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                                      </svg>
+                                                  </div>
+                                                  <ul class="flex-col justify-start items-start text-[11px] font-iran_Medium
+                                                   text-[#7a7a7a] mt-5 leading-8">
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                      <li class="hover:text-main_digikala">
+                                                          <a href="">دسته بندی موبایل</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                              </div>
+
+
+                          </div>
+                      </div>
+
+                      <!-- mega_menu -->
+
+                  </li>
+              </ul>
+              <span class="mx-4 text-lg text-gray">|</span>
+              <ul id="nav_items" class="flex items-center relative">
+                  <div id="marker" style="background-color:#ef4056"></div>
+                  <li class="flex mx-2 flex-col">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-ladder" viewBox="0 0 16 16">
+                              <path
+                                  d="M4.5 1a.5.5 0 0 1 .5.5V2h6v-.5a.5.5 0 0 1 1 0v14a.5.5 0 0 1-1 0V15H5v.5a.5.5 0 0 1-1 0v-14a.5.5 0 0 1 .5-.5M5 14h6v-2H5zm0-3h6V9H5zm0-3h6V6H5zm0-3h6V3H5z" />
+                          </svg>
+                          <a href="">شگفت انگیزها</a>
+                      </div>
+                  </li>
+                  <li class="flex mx-2 flex-col">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-lamp" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                  d="M5.04.303A.5.5 0 0 1 5.5 0h5c.2 0 .38.12.46.303l3 7a.5.5 0 0 1-.363.687h-.002q-.225.044-.45.081a33 33 0 0 1-4.645.425V13.5a.5.5 0 1 1-1 0V8.495a33 33 0 0 1-4.645-.425q-.225-.036-.45-.08h-.003a.5.5 0 0 1-.362-.688l3-7ZM3.21 7.116A31 31 0 0 0 8 7.5a31 31 0 0 0 4.791-.384L10.171 1H5.83z" />
+                              <path
+                                  d="M6.493 12.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.052.075l-.001.004-.004.01V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+                          </svg>
+                          <a href="">سوپرمارکت</a>
+                      </div>
+                  </li>
+
+                  <li class="flex mx-2 flex-col ">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-hourglass" viewBox="0 0 16 16">
+                              <path
+                                  d="M2 1.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1-.5-.5m2.5.5v1a3.5 3.5 0 0 0 1.989 3.158c.533.256 1.011.791 1.011 1.491v.702c0 .7-.478 1.235-1.011 1.491A3.5 3.5 0 0 0 4.5 13v1h7v-1a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351v-.702c0-.7.478-1.235 1.011-1.491A3.5 3.5 0 0 0 11.5 3V2z" />
+                          </svg>
+                          <a href="">کارت هدیه</a>
+                      </div>
+                  </li>
+                  <li class="flex mx-2 flex-col ">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-cursor" viewBox="0 0 16 16">
+                              <path
+                                  d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z" />
+                          </svg>
+                          <a href="">پرفروش ترین ها</a>
+                      </div>
+                  </li>
+
+                  <li class="xl:flex hidden mx-2 flex-col ">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-cup-straw" viewBox="0 0 16 16">
+                              <path
+                                  d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82q0 .069-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87s-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A1 1 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278M9.768 4.607A14 14 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.3 3.3 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a6 6 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69s2.081-.441 2.438-.69c.042-.029.09-.094.102-.215l.852-8.03a6 6 0 0 1-.435.127 9 9 0 0 1-.89.17zM4.467 4.884s.003.002.005.006zm7.066 0-.005.006zM11.354 5a3 3 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222" />
+                          </svg>
+                          <a href="">تخفیف و پیشنهادها</a>
+                      </div>
+                  </li>
+                  <span class="mx-4 text-lg text-gray">|</span>
+
+                  <li class="flex mx-2 flex-col ">
+                      <div class="flex gap-1 items-center py-[7px]">
+                          <a href="">سوالی دارید؟</a>
+                      </div>
+                  </li>
+                  <li class="flex mx-2 flex-col ">
+                          <a href="">در دیجی کالا بفروشید!</a>
+                      
+                  </li>
+              </ul>
+          </div>
+          <div class="flex justify-end items-center">
+              <ul class="relative">
+                  <li class="flex justify-center items-center after:w-full after:h-auto after:text-[10px]
+                  after:bg-[#323232] dark:after:bg-white after:absolute after:content-['لطفا_شهر_خود_را_انتخاب_کنید']
+                   after:top-6 after:text-white dark:after:text-bg_dark1
+                  after:rounded-md after:justify-center after:py-3 after:px-2 after:hidden 
+                  hover:after:flex">
+                      <div class="flex items-center gap-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-pin-map" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                  d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z" />
+                              <path fill-rule="evenodd"
+                                  d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+                          </svg>
+                          <a href="">لطفا شهر خود را وارد کنید</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- nav -->
+
+
+    </div>
+
+  <!-- header -->
+    
+    
+    
+    
+    
+    <div class="w-full font-iran_Bold text-slate-400 mt-5">
+      <ul
+        id="tabs"
+        class="flex items-center w-full lg:w-[97%] xl:w-5/6   border-b border-slate-300 gap-2 mx-auto"
+      >
+        <li
+          class="w-1/2 lg:w-auto flex mx-2 flex-col after:w-full after:h-[3px] after:rounded-t-lg after:bg-[#ef4056] text-[#ef4056] cursor-pointer dark:text-white"
+        >
+          <div class="flex item-center gap-1 py-[7px] w-full justify-center text-center">
+            <a class="text-center ">سبد خرید</a>
+            <span class="text-white bg-[#ef4056] p-[1px_7px] rounded-sm text-sm"
+              >1</span
+            >
+          </div>
+        </li>
+        <li
+          class="w-1/2 lg:w-auto flex mx-2 flex-col after:w-full after:h-[3px] after:rounded-t-lg cursor-pointer dark:text-white"
+        >
+          <div class="flex item-center gap-1 py-[7px] w-full text-center">
+            <a class="text-center w-full">خرید بعدی</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="content mt-4">
+        <div class="lg:w-[97%] xl:w-5/6 w-full mx-auto flex lg:flex-row flex-col gap-2 relative">
+          <div class="lg:w-[79%] w-full">
+            <div
+            style="
+            background-image: url(../res/cart/digiplus-purple-pattern.svg);
+            background-repeat: no-repeat;
+          "
+            class="lg:w-full dark:bg-black w-[98%] mx-auto rounded-md border border-purple-800 p-6">
+              <div class="w-full lg:flex">
+                <div class="w-[40%] flex justify-start items-start flex-col ">
+                  <img
+                    src="../res/cart/digiplus-purple.svg"
+                    width="93"
+                    height="24"
+                    alt=""
+                  />
+                  <h4 class="my-4 font-iran_Bold text-md text-slate-700 dark:text-white">
+                    خدمات ویژه با اشتراک دیجی‌پلاس
+                  </h4>
+                  
+                </div>
+                <div class="w-[60%]">
+                  <ul
+                    class="list-disc marker:text-[#b12ba4] font-iran_Regular lg:my-2 my-0
+                     text-[11px] leading-6 text-slate-600 dark:text-white lg:px-0 px-4"
+                  >
+                    <li>
+                      ۴ ارسال رایگان ماهانه + ۲ ارسال رایگان بیشتر، ویژه سوپرمارکت
+                    </li>
+                    <li>پشتیبانی اختصاصی</li>
+                    <li>
+                      مهلت بیشتر مرجوعی کالا تا ۳۰ روز (به‌جز موبایل و کالای
+                      بهداشتی)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                  class="lg:w-auto w-full lg:mt-0 mt-3 h-auto border flex justify-center
+                   text-purple-700 dark:text-white font-iran_Medium text-xs gap-2
+                    border-purple-700 dark:border-white rounded-lg p-3"
+                >
+                  <p>افزودن دیجی‌پلاس به سبد خرید</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+              </button>
+            </div>
+
+            <div
+              class="lg:w-full w-[95%] mx-auto rounded-md h-auto bg-slate-200 border
+               border-slate-300 my-3 py-4 px-3 flex justify-between items-center"
+            >
+              <div class="flex justify-start items-center gap-3 text-slate-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill=""
+                  class="bi bi-minecart stroke-1 stroke-slate-600"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2m0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4m8-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2m0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4M.115 3.18A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 14 12H2a.5.5 0 0 1-.491-.408l-1.5-8a.5.5 0 0 1 .106-.411zm.987.82 1.313 7h11.17l1.313-7z"
+                  />
+                </svg>
+                <div class="leading-6">
+                  <p class="text-xs font-iran_Medium text-slate-800">
+                    دریافت مرسوله‌های پست توسط دیجی‌کالا با هزینه ۴,۹۰۰ تومان
+                  </p>
+                  <p class="text-[11px] font-iran_Regular">
+                    برای خریدهای بالای ۱ میلیون تومان در استان کهگیلویه و
+                    بویراحمد
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center text-blue-500 gap-2">
+                <span class="cursor-pointer text-xs">دیدن شرایط</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  class="bi bi-chevron-left stroke-1 stroke-blue-500"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="w-full lg:rounded-md lg:border border-slate-400 my-2 p-4
+            dark:bg-black">
+              <div class="flex justify-between items-start relative">
+                <div class="leading-7">
+                  <h5 class="text-md font-iran_Medium text-black dark:text-white">
+                    سبد خرید شما
+                  </h5>
+                  <p class="text-xs font-iran_Light text-slate-500 dark:text-white">
+                    <span>1</span>کالا
+                  </p>
+                </div>
+                
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    class="bi bi-three-dots-vertical cursor-pointer dropDownBtn"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                    />
+                  </svg>
+
+                  <span class="dropDownContent hidden w-auto h-auto bg-white border border-slate-100 
+                  shadow-[1px_1px_3px_0px_rgba(0,0,0,0.2)] rounded-md absolute left-4 py-2 flex">
+                    <ul class="flex flex-col justify-center items-start">
+                      <li class="flex justify-start items-center gap-2 py-3 px-4 text-[15px]
+                      hover:bg-slate-100 w-full text-slate-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                          <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                        <span>انتقال همه به خرید بعدی</span>
+                      </li>
+                      <li class="flex justify-start items-center gap-2 py-3 px-4 text-[15px]
+                      hover:bg-slate-100 w-full text-slate-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg>
+                        <span>حذف همه</span>
+                      </li>
+                    </ul>
+                  </span>
+
+                </div>
+              </div>
+
+              <div class="mt-7 mr-7 leading-6">
+                <div class="flex text-[11px] text-orange-500">
+                  <span>۱,۹۰۱,۰۰۰ </span>
+                  <span>تومان</span>
+                  <span>افزایش یافت </span>
+                </div>
+                <div class="flex text-[11px] text-slate-700 dark:text-white">
+                  <span>از </span>
+                  <span>۳۱,۹۹۹,۰۰۰ </span>
+                  <span>تومان</span>
+                  <span>به</span>
+                  <span>۳۳,۹۰۰,۰۰۰ </span>
+                  <span>تومان</span>
+                </div>
+              </div>
+
+              <div class="w-full flex justify-start py-5 px-4">
+                <div>
+                  <img
+                    src="../res/cart/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp"
+                    width="114"
+                    height="114"
+                    class="my-2 rounded-md"
+                    alt=""
+                  />
+                  <img
+                    src="../res/cart/IncredibleOffer.svg"
+                    width="139"
+                    height="16"
+                    alt=""
+                  />
+                  <div
+                    class="timer text-main_digikala flex justify-center gap-1 text-sm my-2"
+                  >
+                    <span>25</span>
+                    <span>:</span>
+                    <span>14</span>
+                    <span>:</span>
+                    <span>11</span>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <div
+                      class="rounded-md dark:bg-white w-auto h-auto border border-slate-400 text-main_digikala flex items-center gap-4 p-2"
+                    >
+                      <span onclick="increment()">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-plus stroke-[0.5] cursor-pointer stroke-main_digikala"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                        />
+                      </svg>
+                      </span>
+                      <span id="counter">1</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="currentColor"
+                        class="bi bi-trash stroke-[0.5] cursor-pointer stroke-main_digikala"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                        />
+                        <path
+                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3">
+                  <h5 class="text-slate-900 dark:text-white text-sm font-iran_Bold">
+                    هدفون بلوتوثی کیو سی وای مدل T13 TWS
+                  </h5>
+                  <div class="flex gap-2 items-center mt-3 mb-2">
+                    <span class="size-4 rounded-full bg-black dark:border dark:border-white"></span>
+                    <span class="text-xs text-slate-600 dark:text-white">مشکی</span>
+                  </div>
+                  <div class="flex gap-2 items-center mt-3 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-tree"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507"
+                      />
+                    </svg>
+                    <span class="text-xs text-slate-600 dark:text-white"
+                      >گارانتی 18 ماهه پارسه پیشتاز ونداد پرداز( جی پرو)</span
+                    >
+                  </div>
+                  <div class="flex gap-2 items-center mt-3 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-tornado"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M1.125 2.45A.9.9 0 0 1 1 2c0-.26.116-.474.258-.634a1.9 1.9 0 0 1 .513-.389c.387-.21.913-.385 1.52-.525C4.514.17 6.18 0 8 0c1.821 0 3.486.17 4.709.452.607.14 1.133.314 1.52.525.193.106.374.233.513.389.141.16.258.374.258.634 0 1.011-.35 1.612-.634 2.102l-.116.203a2.6 2.6 0 0 0-.313.809 3 3 0 0 0-.011.891.5.5 0 0 1 .428.849q-.091.09-.215.195c.204 1.116.088 1.99-.3 2.711-.453.84-1.231 1.383-2.02 1.856q-.307.183-.62.364c-1.444.832-2.928 1.689-3.735 3.706a.5.5 0 0 1-.748.226l-.001-.001-.002-.001-.004-.003-.01-.008a2 2 0 0 1-.147-.115 4.1 4.1 0 0 1-1.179-1.656 3.8 3.8 0 0 1-.247-1.296A.5.5 0 0 1 5 12.5v-.018l.008-.079a.73.73 0 0 1 .188-.386c.09-.489.272-1.014.573-1.574a.5.5 0 0 1 .073-.918 3.3 3.3 0 0 1 .617-.144l.15-.193c.285-.356.404-.639.437-.861a.95.95 0 0 0-.122-.619c-.249-.455-.815-.903-1.613-1.43q-.291-.19-.609-.394l-.119-.076a12 12 0 0 1-1.241-.334.5.5 0 0 1-.285-.707l-.23-.18C2.117 4.01 1.463 3.32 1.125 2.45m1.973 1.051q.17.156.358.308c.472.381.99.722 1.515 1.06 1.54.317 3.632.5 5.43.14a.5.5 0 0 1 .197.981c-1.216.244-2.537.26-3.759.157.399.326.744.682.963 1.081.203.373.302.79.233 1.247q-.077.494-.39.985l.22.053.006.002c.481.12.863.213 1.47.01a.5.5 0 1 1 .317.95c-.888.295-1.505.141-2.023.012l-.006-.002a4 4 0 0 0-.644-.123c-.37.55-.598 1.05-.726 1.497q.212.068.465.194a.5.5 0 1 1-.448.894 3 3 0 0 0-.148-.07c.012.345.084.643.18.895.14.369.342.666.528.886.992-1.903 2.583-2.814 3.885-3.56q.305-.173.584-.34c.775-.464 1.34-.89 1.653-1.472.212-.393.33-.9.26-1.617A6.74 6.74 0 0 1 10 8.5a.5.5 0 0 1 0-1 5.76 5.76 0 0 0 3.017-.872l-.007-.03c-.135-.673-.14-1.207-.056-1.665.084-.46.253-.81.421-1.113l.131-.23q.098-.167.182-.327c-.29.107-.62.202-.98.285C11.487 3.83 9.822 4 8 4c-1.821 0-3.486-.17-4.709-.452q-.098-.022-.193-.047M13.964 2a1 1 0 0 0-.214-.145c-.272-.148-.697-.297-1.266-.428C11.354 1.166 9.769 1 8 1s-3.354.166-4.484.427c-.569.13-.994.28-1.266.428A1 1 0 0 0 2.036 2q.058.058.214.145c.272.148.697.297 1.266.428C4.646 2.834 6.231 3 8 3s3.354-.166 4.484-.427c.569-.13.994-.28 1.266-.428A1 1 0 0 0 13.964 2"
+                      />
+                    </svg>
+                    <span class="text-xs text-slate-600 dark:text-white">دیجی‌کالا</span>
+                  </div>
+                  <div class="flex gap-2 items-center mt-3 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trophy text-main_digikala"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z"
+                      />
+                    </svg>
+                    <span class="text-xs text-slate-600 dark:text-white">ارسال دیجی‌کالا</span>
+                  </div>
+                  <div class="flex gap-2 items-center mt-3 mb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-whatsapp text-blue-800"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                      />
+                    </svg>
+                    <span class="text-xs text-slate-600 dark:text-white"
+                      >ارسال امروز (فعلا در شهر تهران و کرج)</span
+                    >
+                  </div>
+                  <div class="mt-8 flex flex-col gap-3">
+                    <div class="text-main_digikala text-xs flex gap-1">
+                      <span>۱۰۱,۰۰۰</span>
+                      <span class="text-[10px]">تومان</span>
+                      <span>تخفیف</span>
+                    </div>
+                    <div class="text-slate-900 dark:text-white flex items-center gap-2">
+                      <span class="text-lg">۵۹۹,۰۰۰</span>
+                      <span class="text-xs">تومان</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full h-auto border border-slate-400 rounded-md flex p-4 my-3">
+                <div class="flex justify-start items-center">
+                  <div>
+                    <input type="checkbox" class="size-[19px]">
+                  </div>
+                  <div class="px-3 flex flex-col gap-3">
+                    <p class="text-slate-800 dark:text-white text-xs text-nowrap">بیمه تجهیزات دیجیتال - بیمه سامان</p>
+                    <div class="flex justify-start items-center gap-1">
+                      <span class="bg-main_digikala text-white text-xs p-1 flex 
+                      justify-center items-center rounded-full">50%</span>
+                      <h4 class="text-md text-slate-800 dark:text-white ">۵۵۴,۸۱۰</h4>
+                      <span class="text-xs text-slate-800 dark:text-white">تومان</span>
+                    </div>
+                    <del class="flex justify-center items-center text-xs text-slate-300">۵۵۴,۸۱۰</del>
+                  </div>
+                </div>
+                <div class="w-full flex justify-end items-end text-blue-600">
+                  <div class="flex items-center gap-2 cursor-pointer">
+                    <span class="text-xs">جزئیات</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      class="bi bi-chevron-left stroke-1 stroke-blue-600"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="w-full flex justify-end items-end text-blue-600">
+                <div class="flex items-center gap-2 cursor-pointer">
+                  <span class="text-xs">انتقال به خرید بعدی</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="currentColor"
+                    class="bi bi-chevron-left stroke-1 stroke-blue-600"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lg:w-[21%] w-full rounded-md"
+            style="
+              position: sticky !important;
+              top: 15px !important;
+              height: 100%;
+            "
+          >
+            <div
+              class="w-full border dark:bg-bg_dark2 border-slate-200 lg:rounded-md font-iran_Medium"
+            >
+              <div class="px-4 pt-3">
+                <div class="flex justify-between w-full my-6 text-slate-900 dark:text-white">
+                  <span class="text-xs">قیمت کالاها <span>(1)</span></span>
+                  <span class="flex gap-1 text-sm"
+                    >۹۷,۰۰۰<span class="text-[9px]">تومان</span></span
+                  >
+                </div>
+                <div class="flex justify-between w-full my-6 text-slate-900 dark:text-white">
+                  <span class="text-xs">جمع سبد خرید</span>
+                  <span class="flex gap-1 text-sm"
+                    >۹۷,۰۰۰<span class="text-[9px]">تومان</span></span
+                  >
+                </div>
+                <div
+                  class="flex justify-between w-full my-6 text-main_digikala "
+                >
+                  <span class="text-xs">سود شما از خرید</span>
+                  <span class="flex gap-1 text-sm"
+                    ><span>(37%)</span>۹۷,۰۰۰<span class="text-[9px]"
+                      >تومان</span
+                    ></span
+                  >
+                </div>
+              </div>
+
+              <button
+                class="w-11/12 mx-auto bg-main_digikala text-white lg:flex hidden justify-center items-center py-3 rounded-md text-sm"
+              >
+                تایید و تکمیل سفارش
+              </button>
+
+              <div class="w-full lg:bg-slate-200 bg-white dark:bg-black  lg:mt-3">
+                <div class="w-full flex justify-between items-center px-4 lg:py-5 pb-5">
+                  <div class="flex justify-start items-center gap-2 ">
+                    <img
+                      src="../res/cart/club-point.svg"
+                      width="16"
+                      height="16"
+                    />
+                    <p class="text-slate-800 dark:text-white text-xs">دیجی‌کلاب</p>
+                    <span class="relative flex justify-center items-center after:w-[300px] after:h-auto
+                     after:bg-[#323232] dark:after:bg-white after:absolute
+                     after:content-['بعد_از_پایان_مهلت_مرجوعی،_برای_دریافت_امتیاز_به_صفحه_ماموریت‌های_کلابی_سر_بزنید'] after:top-6 after:text-white
+                      dark:after:text-bg_dark1 after:rounded-md after:justify-center after:py-3 
+                      after:px-2 after:hidden lg:hover:after:flex after:leading-7 after:text-[13px]
+                      after:left-0">
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-info-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                      />
+                      <path
+                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                      
+                    </svg>
+                  </span>
+                    
+                  </div>
+                  <div class="text-sm text-slate-800 dark:text-white">
+                    <span>7</span>
+                    <span>امتیاز</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-white my-4 leading-6 font-iran_Regular lg:flex hidden">
+              هزینه این سفارش هنوز پرداخت نشده‌ و در صورت اتمام موجودی، کالاها
+              از سبد حذف می‌شوند
+            </p>
+
+            <div class="lg:w-full lg:mb-0 mb-[55px] w-[95%] mx-auto my-3 lg:my-0 border
+             border-slate-200 dark:bg-black rounded-md py-3 px-2">
+              <div
+                class="flex justify-start items-center text-purple-800 dark:text-white gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-handbag"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2m3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6z"
+                  />
+                </svg>
+                <p class="text-[11px] font-iran_Medium">
+                  ارسال <strong>رایگان</strong> سفارش‌ها برای اعضای دیجی‌پلاس
+                </p>
+              </div>
+              <p
+                class="text-[11px] text-slate-700 dark:text-white my-2 leading-5 font-iran_Medium"
+              >
+                ۴۹ هزارتومان هزینه ارسال به سراسر ایران برای کاربران غیر
+                دیجی‌پلاس
+              </p>
+            </div>
+          </div>
+          <div
+          class="w-full dark:bg-black lg:hidden grid grid-cols-2 h-auto font-iran_Medium 
+          fixed bottom-[55px] 
+          shadow-[0_-2px_2px_0_rgba(0,0,0,0.2)] !z-[100] py-2 px-4 bg-white">
+      
+          <div class="py-3 px-2">
+            <button class="w-full bg-main_digikala text-white rounded-md text-nowrap 
+            py-3">تایید و تکمیل سفارش</button>
+          </div>
+          <div class="flex flex-col justify-center items-end gap-2">
+            <span class="text-xs text-slate-600 dark:text-white">جمع سبد خرید</span>
+            <span class="text-sm text-slate-800 dark:text-white font-iran_Bold">۳۳,۹۰۰,۰۰۰<span>تومان</span></span>
+          </div>
+      
+          </div>
+        </div>
+
+        <div class="lg:w-5/6 w-full mx-auto gap-2 flex lg:flex-row flex-col relative hidden  ">
+          <div class="lg:w-[79%] w-full">
+            <div
+              class="w-full dark:bg-bg_dark2 rounded-md border border-slate-200 lg:rounded-md flex justify-center py-7 flex-col"
+              style="align-items: center !important"
+            >
+              <img
+                src="../res/cart/empty-sfl.webp"
+                width="200"
+                height="150"
+                alt=""
+              />
+              <h2 class="text-lg my-5 text-[#242424] dark:text-white">
+                لیست خرید بعدی شما خالی است!
+              </h2>
+              <p
+                class="text-xs font-iran_Regular px-7 text-center leading-7 dark:text-white"
+              >
+                شما می‌توانید محصولاتی که به سبد خرید خود افزوده‌اید و فعلا قصد
+                خرید آن‌ها را ندارید، در لیست خرید بعدی قرار داده و هر زمان مایل
+                بودید آن‌ها را به سبد خرید اضافه کرده و خرید آن‌ها را تکمیل
+                کنید.
+              </p>
+            </div>
+          </div>
+          <div class="lg:w-[21%] dark:bg-bg_dark2 rounded-md w-full mt-5 lg:mt-0"
+            style="
+              position: sticky !important;
+              top: 15px !important;
+              height: 100%;
+            "
+          >
+            <div class="w-full border border-slate-200 rounded-md px-4 pt-5">
+              <div class="flex justify-between items-center">
+                <div class="flex justify-start items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="#f9a825"
+                    class="bi bi-box-arrow-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"
+                    />
+                  </svg>
+                  <a
+                    class="text-sm font-iran_Medium mx-2 text-[#242424] dark:text-white"
+                    href="#"
+                    >ورود به حساب کاربری</a
+                  >
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                  />
+                </svg>
+              </div>
+              <p class="text-xs font-iran_Light my-4 leading-6 dark:text-white">
+                برای مشاهده محصولاتی که پیش‌تر به سبد خرید خود اضافه کرده‌اید
+                وارد شوید.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="mb-20 lg:mb-0">
+
+      <div class="mt-3 w-full border-t-[1px] border-[rgba(0,0,0,0.1)] 
+      lg:flex flex-col hidden dark:bg-bg_dark1 dark:text-white">
+          <div class="w-full h-auto py-7 px-5 flex">
+              <div class="w-2/3 flex-col justify-center items-start font-iran_Light">
+                  <img src="../res/main_page/full-horizontal.svg"
+                  width="195"
+                  height="30" alt="">
+                  <div class="flex items-center gap-3 my-4">
+                      <p class="text-xs text-nowrap">تلفن پشتیبانی ۶۰۰۰۰۰۰۰ - ۰۲۱</p>
+                      <div>|</div>
+                      <p class="text-xs text-nowrap">۰۲۱-۹۰۰۰۰۰۰۰۰۰</p>
+                      <div>|</div>
+                      <p class="text-xs text-nowrap">۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم</p>
+                  </div>
+              </div>
+              <div class="w-1/3 flex justify-end items-start font-iran_Medium text-xs text-[#9e9e9e]">
+                  <div class="scrollToTop cursor-pointer w-auto h-auto border border-slate-400 py-3 px-5 flex gap-2 rounded-md">
+                      بازگشت به بالا
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                          class="bi bi-chevron-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+                      </svg>
+                  </div>
+              </div>
+  
+          </div>
+  
+          <div class="w-full h-auto py-7 px-5 flex mx-0 justify-around">
+  
+              <div class="flex flex-col justify-center items-center">
+                  <img src="../res/main_page/footer/cash-on-delivery.svg" class="dark:bg-white dark:rounded-md"
+                      width="56" height="56" alt="">
+                  <p class="text-xs font-iran_Regular my-2">امکان پرداخت در محل</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                  <img src="../res/main_page/footer/days-return.svg" class="dark:bg-white dark:rounded-md"
+                      width="56" height="56" alt="">
+                  <p class="text-xs font-iran_Regular my-2">هفت روز ضمانت بازگشت کالا</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                  <img src="../res/main_page/footer/original-products.svg" class="dark:bg-white dark:rounded-md"
+                      width="56" height="56" alt="">
+                  <p class="text-xs font-iran_Regular my-2">ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                  <img src="../res/main_page/footer/support.svg" class="dark:bg-white dark:rounded-md"
+                      width="56" height="56" alt="">
+                  <p class="text-xs font-iran_Regular my-2">۷ روز ﻫﻔﺘﻪ، ۲۴ ﺳﺎﻋﺘﻪ</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                  <img src="../res/main_page/footer/express-delivery.svg" class="dark:bg-white dark:rounded-md"
+                      width="56" height="56" alt="">
+                  <p class="text-xs font-iran_Regular my-2">اﻣﮑﺎن ﺗﺤﻮﯾﻞ اﮐﺴﭙﺮس</p>
+              </div>
+  
+          </div>
+  
+  
+          <div class="w-full flex justify-between  py-4 px-6">
+              <div class="w-auto">
+                  <ul class="flex flex-col justify-start items-start font-iran_Medium">
+                      <li class=" my-1 font-iran_Bold">با دیجی‌کالا</li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">اتاق خبر دیجی‌کالا</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">فروش در دیجی‌کالا</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">فرصت‌های شغلی</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">گزارش تخلف در دیجی‌کالا</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">تماس با دیجی‌کالا</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">درباره دیجی‌کالا</a>
+                          </li>
+                  </ul>
+              </div>
+              <div class="w-auto">
+                  <ul class="flex flex-col justify-start items-start font-iran_Medium">
+                      <li class=" my-1 font-iran_Bold">خدمات مشتریان</li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">پاسخ به پرسش‌های متداول</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">رویه‌های بازگرداندن کالا</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">شرایط استفاده</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">حریم خصوصی</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">گزارش باگ</a>
+                          </li>
+                  </ul>
+              </div>
+              <div class="w-auto">
+                  <ul class="flex flex-col justify-start items-start font-iran_Medium">
+                      <li class=" my-1 font-iran_Bold">راهنمای خرید از دیجی‌کالا</li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">نحوه ثبت سفارش</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">رویه ارسال سفارش</a>
+                          </li>
+                      <li class="text-[14px] my-1 text-slate-500">
+                          <a href="#">شیوه‌های پرداخت</a>
+                          </li>
+                  </ul>
+              </div>
+  
+              <div class="w-auto flex flex-col justify-start items-start">
+                  <h3 class="font-iran_Bold my-1">همراه ما باشید!</h3>
+                  <div class="w-full flex gap-8 my-5 dark:bg-white dark:p-2 dark:rounded-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9e9e9e"
+                          class="bi bi-twitter cursor-pointer" viewBox="0 0 16 16">
+                          <path
+                              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9e9e9e"
+                          class="bi bi-instagram cursor-pointer" viewBox="0 0 16 16">
+                          <path
+                              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9e9e9e"
+                          class="bi bi-linkedin cursor-pointer" viewBox="0 0 16 16">
+                          <path
+                              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9e9e9e"
+                          class="bi bi-telegram cursor-pointer" viewBox="0 0 16 16">
+                          <path
+                              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                      </svg>
+  
+                  </div>
+                  <h3 class="font-iran_Bold my-1 text-nowrap">با ثبت ایمیل، از جدید‌ترین تخفیف‌ها با‌خبر شوید</h3>
+  
+                  <div class="flex font-iran_Medium gap-2 my-3 w-full">
+                      <input type="text"
+                          class="w-[75%] outline-none py-3 px-4 text-sm bg-[#eee] text-[#9e9e9e] rounded-md"
+                          placeholder="ایمیل شما">
+                      <button class="w-[25%] p-3 rounded-md bg-[#ccc] text-white">ثبت</button>
+                  </div>
+              </div>
+  
+          </div>
+  
+          <div class="w-full">
+              <div
+                  class="w-[95%] mx-auto bg-gradient-to-r from-[#3c4b6d] to-[#3c4b6d] h-auto rounded-md px-5 py-4 flex">
+                  <div class="flex justify-start items-center w-1/3">
+                      <img src="../res/main_page/footer/market/footerlogo2.webp" width="44" height="44" alt="">
+                      <h2 class="text-white mx-3 text-lg font-iran_Medium">دانلود اپلیکیشن دیجی کالا</h2>
+                  </div>
+                  <div class="w-2/3 flex justify-end">
+                      <img src="../res/main_page/footer/market/myket.svg" width="142" height="44"
+                          class="rounded-lg mx-2" alt="">
+                      <img src="../res/main_page/footer/market/coffe-bazzar.svg" width="142" height="44"
+                          class="rounded-lg mx-2" alt="">
+                      <img src="../res/main_page/footer/market/sib-app.svg" width="142" height="44"
+                          class="rounded-lg mx-2" alt="">
+                      <div
+                          class="bg-white flex justify-center items-center rounded-md py-1 px-2 mx-2 dark:text-bg_dark1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                              class="bi bi-three-dots" viewBox="0 0 16 16">
+                              <path
+                                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                          </svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <hr class="w-[95%] text-slate-400 my-8 mx-auto">
+  
+          <div class="w-full px-9 flex">
+              <div class="w-[70%] flex flex-col justify-start items-start font-iran_Light pl-3
+               dark:bg-white dark:text-bg_dark1 dark:p-2 dark:rounded-md">
+                  <div class="relative">
+                      <div class="w-full h-full bg-gradient-to-b from-transparent from-60% to-white absolute"></div>
+                      <h2 class="text-xl my-3">
+                          <strong>فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</strong>
+                      </h2>
+                      <p class="text-xs font-iran_Medium leading-7 h-[100px] overflow-hidden">
+                          یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت
+                          مناسب را در مدت زمان ی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛
+                          ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این
+                          طریق
+                          مشتریان ثابت خود را داشته باشد.
+                          یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا یا هر فروشگاه‌ اینترنتی دیگری، این است که کالای
+                          خریداری شده چه زمانی به دستشان می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با
+                          فروشنده
+                          کالا،‌ مقصد کالا و همچنین نوع کالا در اختیار کاربران خود قرار می‌دهد. هر یک از روش های ارسال
+                          دیجی کالا شرایط و ویژگی‌های خاص خود را دارند که ممکن است گاهی برای کاربران جدید، مبهم و
+                          پیچیده
+                          به نظر برسند. برای آگاهی بیشتر مشتریان از خدمات دیجی‌کالا، این فروشگاه اینترنتی در بخشی از
+                          وب‌سایت خود راهنمای کاملی از شیوه‌‌های ارسال را به صورت ساده و به دور از پیچیدگی، قرار داده
+                          است
+                          که شامل 8 نوع ارسال کالا به روش‌های زیر است: ارسال امروز، دریافت حضوری، دریافت از گنجه،
+                          ارسال
+                          توسط فروشنده، ارسال عادی، ارسال کالاهای بزرگ، سنگین و فوق سنگین، ارسال سریع سوپرمارکتی،
+                          ارسال با
+                          پست
+  
+                          کدام محصولات در دیجی‌کالا قابل سفارش هستند؟
+  
+                          تقریبا می‌توان گفت محصولی وجود ندارد که دیجی‌کالا برای مشتریان خود در سراسر کشور فراهم نکرده
+                          باشد. شما می‌توانید در تمامی روزهای هفته و تمامی شبانه روز دیجی‌کالا که محصولات دارای تخفیف
+                          عالی
+                          می‌شوند، سفارش خود را به سادگی ثبت کرده و در روز و محدوده زمانی مناسب خود، درب منزل تحویل
+                          بگیرید. بعضی از گروه‌های اصلی و زیر مجموعه‌های پرطرفدار محصولات دیجی‌کالا شامل مواردی می‌شود
+                          که
+                          در ادامه به معرفی آن‌ها می‌پردازیم که امکان ارسال امروز برای آن ها وجود دارد.
+                      </p>
+                  </div>
+  
+                  <div class="flex gap-1 items-center justify-start mt-5">
+                      <a class="more_text cursor-pointer text-blue-600 text-sm font-iran_Medium">مشاهده بیشتر</a>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#00f"
+                          class="bi bi-chevron-left" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                      </svg>
+                  </div>
+  
+              </div>
+  
+              <div class="w-[30%] flex justify-end items-start gap-2">
+                  <div class="border border-[#ccc] rounded-md flex justify-center items-center p-2 dark:bg-white">
+                      <img src="../res/main_page/footer/namad/rezi.webp" class="!w-[75px] !h-[75px] object-contain"
+                          alt="">
+                  </div>
+                  <div class="border border-[#ccc] rounded-md flex justify-center items-center p-2 dark:bg-white">
+                      <img src="../res/main_page/footer/namad/kasbokar.webp"
+                          class="!w-[75px] !h-[75px] object-contain" alt="">
+                  </div>
+                  <div class="border border-[#ccc] rounded-md flex justify-center items-center p-2 dark:bg-white">
+                      <img src="../res/main_page/footer/namad/logo.png" class="!w-[75px] !h-[75px] object-contain"
+                          alt="">
+                  </div>
+              </div>
+  
+          </div>
+          <hr class="w-[95%] text-slate-400 mt-8 mb mx-auto">
+  
+          <div class="w-full my-5">
+              <p class="text-xs font-iran_Light flex justify-center items-center text-center">برای استفاده از مطالب
+                  دیجی‌کالا، داشتن
+                  «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای
+                  شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) است.</p>
+          </div>
+  
+  
+          <ul class="flex flex-wrap justify-start w-full ">
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digiclub.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digify.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digikala-business.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digimag.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digiMehr.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/diginext.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digipay.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digiplus.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/digistyle.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/jet.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/magnet.svg" width="120" alt="">
+              </li>
+              <li
+                  class="bg-[#f0f0f1] border-b border-l boder-[#f1f1f1] dark:border-bg_dark1 py-[20px] px-[30px] flex justify-center items-center grow cursor-pointer">
+                  <img src="../res/main_page/footer/footer_b/smartech.svg" width="120" alt="">
+              </li>
+          </ul>
+  
+      </div>
+  
+      <!-- footer_res -->
+  
+      <div class="w-full h-auto lg:hidden flex flex-col mt-3 dark:bg-bg_dark1 dark:text-white dark:pt-4">
+  
+          <div class="w-[95%] mx-auto flex flex-col justify-center items-center">
+              <div class="scrollToTop flex items-center justify-center text-blue-700 dark:text-blue-300 font-iran_Bold gap-2">
+                  <span class="text-sm">بازگشت به بالا</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                      class="bi bi-chevron-up" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                          d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+                  </svg>
+              </div>
+  
+              <div class="w-full flex justify-between items-center my-3 ">
+                  <div class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                          <path
+                              d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
+                          <path
+                              d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
+                          <path
+                              d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
+                      </svg>
+                      <div class="flex-col justify-center items-start mr-4">
+                          <span class="text-[11px] font-iran_Medium my-1">۷ روز هفته، ۲۴ ساعت</span>
+                          <h4 class="text-[13px] font-iran_Bold my-1">تماس با پشتیبانی</h4>
+                      </div>
+                  </div>
+                  <div class="flex items-center justify-center cursor-pointer font-iran_Bold">
+                      <span class="border py-3 px-4 text-xs rounded-lg">تماس</span>
+                  </div>
+              </div>
+  
+              <hr class="my-3 text-[#ccc] w-full">
+              <div class="w-full flex justify-between items-center my-3 ">
+                  <div class="flex items-center">
+                      <img src="../res/main_page/footer/market/footerlogo2.webp" width="44" height="44" alt="">
+  
+                      <div class="flex-col justify-center items-start mr-4">
+                          <span class="text-[11px] font-iran_Medium my-1">۷ روز هفته، ۲۴ ساعت</span>
+                          <h4 class="text-[13px] font-iran_Bold my-1">تماس با پشتیبانی</h4>
+                      </div>
+                  </div>
+                  <div
+                      class="flex items-center bg-black rounded-lg text-white justify-center cursor-pointer font-iran_Bold">
+                      <span class="border py-3 px-4 text-xs ">دانلود</span>
+                  </div>
+              </div>
+              <hr class="my-3 text-[#ccc] w-full">
+  
+              <div class="w-full mx-auto text-xs">
+                  <details class="group border-b border-slate-300 py-5 font-iran_Regular mx-auto">
+                      <summary class="flex justify-between items-center cursor-pointer list-none">
+                          <div class="font-iran_Bold ">
+                              <span>با دیجی کالا</span>
+                          </div>
+                          <span class="transition group-open:rotate-180">
+                              <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  viewBox="0 0 24 24" width="20">
+                                  <path d="M6 9l6 6 6-6"></path>
+                              </svg>
+                          </span>
+                      </summary>
+                      <ul class="flex flex-col text-xs text-slate-900 dark:text-white justify-start items-start">
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                      </ul>
+                  </details>
+              </div>
+  
+              <div class="w-full mx-auto text-xs">
+                  <details class="group border-b border-slate-300 py-5 font-iran_Regular mx-auto">
+                      <summary class="flex justify-between items-center cursor-pointer list-none">
+                          <div class="font-iran_Bold ">
+                              <span>با دیجی کالا</span>
+                          </div>
+                          <span class="transition group-open:rotate-180">
+                              <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  viewBox="0 0 24 24" width="20">
+                                  <path d="M6 9l6 6 6-6"></path>
+                              </svg>
+                          </span>
+                      </summary>
+                      <ul class="flex flex-col text-xs text-slate-900 dark:text-white justify-start items-start">
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                      </ul>
+                  </details>
+              </div>
+  
+              <div class="w-full mx-auto text-xs">
+                  <details class="group border-b border-slate-300 py-5 font-iran_Regular mx-auto">
+                      <summary class="flex justify-between items-center cursor-pointer list-none">
+                          <div class="font-iran_Bold ">
+                              <span>با دیجی کالا</span>
+                          </div>
+                          <span class="transition group-open:rotate-180">
+                              <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  viewBox="0 0 24 24" width="20">
+                                  <path d="M6 9l6 6 6-6"></path>
+                              </svg>
+                          </span>
+                      </summary>
+                      <ul class="flex flex-col text-xs text-slate-900 dark:text-white justify-start items-start">
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                          <li class="mt-5">
+                              <a href="">اتاق خبر دیجی کالا</a>
+                          </li>
+                      </ul>
+                  </details>
+              </div>
+              <div class="w-full mx-auto text-xs">
+                  <details class="group border-b border-slate-300 py-5 font-iran_Regular mx-auto">
+                      <summary class="flex justify-between items-center cursor-pointer list-none">
+                          <div class="font-iran_Bold ">
+                              <span>با دیجی کالا</span>
+                          </div>
+                          <span class="transition group-open:rotate-180">
+                              <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  viewBox="0 0 24 24" width="20">
+                                  <path d="M6 9l6 6 6-6"></path>
+                              </svg>
+                          </span>
+                      </summary>
+  
+                      <div class="grid grid-cols-3 cursor-pointer my-10 [&>*:nth-child(3n)]:border-l-0 
+                          dark:bg-white dark:rounded-md">
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120"
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120"
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120"
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120"
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120"
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiplus.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiMehr.svg" width="120" 
+                                  alt="">
+                          </div>
+                          <div class="border-l border-b border-slate-300 flex items-center justify-center py-7">
+                              <img src="../res/main_page/footer/footer_b/digiexpress.svg" width="120" 
+                                  alt="">
+                          </div>
+                      </div>
+  
+  
+  
+                  </details>
+              </div>
+  
+              <div class="w-full flex my-4 dark:bg-white
+               dark:text-bg_dark1 dark:p-2 dark:rounded-md mb-20">
+                  <div class="w-full flex flex-col justify-start items-start font-iran_Light pl-3 ">
+                      <div class="relative">
+                          <div class="w-full h-full bg-gradient-to-b from-transparent from-60% to-white absolute">
+                          </div>
+                          <h2 class="text-sm my-3">
+                              <strong>فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین</strong>
+                          </h2>
+                          <p class="text-xs font-iran_Medium leading-7 h-[100px] overflow-hidden">
+                              یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای
+                              قیمت
+                              مناسب را در مدت زمان ی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته
+                              باشد؛
+                              ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این
+                              طریق
+                              مشتریان ثابت خود را داشته باشد.
+                              یکی از مهم‌ترین دغدغه‌های کاربران دیجی‌کالا یا هر فروشگاه‌ اینترنتی دیگری، این است که
+                              کالای
+                              خریداری شده چه زمانی به دستشان می‌رسد. دیجی‌کالا شیوه‌های مختلفی از ارسال را متناسب با
+                              فروشنده
+                              کالا،‌ مقصد کالا و همچنین نوع کالا در اختیار کاربران خود قرار می‌دهد. هر یک از روش های
+                              ارسال
+                              دیجی کالا شرایط و ویژگی‌های خاص خود را دارند که ممکن است گاهی برای کاربران جدید، مبهم و
+                              پیچیده
+                              به نظر برسند. برای آگاهی بیشتر مشتریان از خدمات دیجی‌کالا، این فروشگاه اینترنتی در بخشی
+                              از
+                              وب‌سایت خود راهنمای کاملی از شیوه‌‌های ارسال را به صورت ساده و به دور از پیچیدگی، قرار
+                              داده
+                              است
+                              که شامل 8 نوع ارسال کالا به روش‌های زیر است: ارسال امروز، دریافت حضوری، دریافت از گنجه،
+                              ارسال
+                              توسط فروشنده، ارسال عادی، ارسال کالاهای بزرگ، سنگین و فوق سنگین، ارسال سریع سوپرمارکتی،
+                              ارسال با
+                              پست
+  
+                              کدام محصولات در دیجی‌کالا قابل سفارش هستند؟
+  
+                              تقریبا می‌توان گفت محصولی وجود ندارد که دیجی‌کالا برای مشتریان خود در سراسر کشور فراهم
+                              نکرده
+                              باشد. شما می‌توانید در تمامی روزهای هفته و تمامی شبانه روز دیجی‌کالا که محصولات دارای
+                              تخفیف
+                              عالی
+                              می‌شوند، سفارش خود را به سادگی ثبت کرده و در روز و محدوده زمانی مناسب خود، درب منزل
+                              تحویل
+                              بگیرید. بعضی از گروه‌های اصلی و زیر مجموعه‌های پرطرفدار محصولات دیجی‌کالا شامل مواردی
+                              می‌شود
+                              که
+                              در ادامه به معرفی آن‌ها می‌پردازیم که امکان ارسال امروز برای آن ها وجود دارد.
+                          </p>
+                      </div>
+  
+                      <div class="flex gap-1 items-center justify-start mt-5">
+                          <a class="more_text cursor-pointer text-blue-700 text-sm font-iran_Bold">مشاهده بیشتر</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#00f"
+                              class="bi bi-chevron-left" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                          </svg>
+                      </div>
+  
+                  </div>
+  
+  
+  
+              </div>
+  
+          </div>
+  
+  
+  
+      </div>
+  
+      <!-- footer_res -->
+  
+  
+  </footer>
+  
+
+    <!-- bottom_navigation -->
+
+   
+
+    <div
+      class="w-full lg:hidden grid grid-cols-4 h-[55px] font-iran_Medium fixed bottom-0 
+      shadow-[0_-2px_2px_0_rgba(0,0,0,0.2)] !z-[100]"
+    >
+      <a
+        href=""
+        class="group bg-white flex flex-col justify-center items-center text-slate-600 text-xs relative"
+      >
+        <span
+          class="w-0 h-full bg-[rgba(0,0,0,0.3)] absolute group-hover:animate-[resNavAnim_0.3s_ease-in-out]"
+        ></span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-alarm-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"
+          />
+        </svg>
+        <span class="my-1 text-slate-900">خانه</span>
+      </a>
+
+      <a
+        href=""
+        class="group bg-white flex flex-col justify-center items-center text-slate-600 text-xs relative"
+      >
+        <span
+          class="w-0 h-full bg-[rgba(0,0,0,0.3)] absolute group-hover:animate-[resNavAnim_0.3s_ease-in-out]"
+        ></span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-alarm-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"
+          />
+        </svg>
+        <span class="my-1 text-slate-900">خانه</span>
+      </a>
+
+      <a
+        href=""
+        class="group bg-white flex flex-col justify-center items-center text-slate-600 text-xs relative"
+      >
+        <span
+          class="w-0 h-full bg-[rgba(0,0,0,0.3)] absolute group-hover:animate-[resNavAnim_0.3s_ease-in-out]"
+        ></span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-alarm-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"
+          />
+        </svg>
+        <span class="my-1 text-slate-900">خانه</span>
+      </a>
+
+      <a
+        href=""
+        class="group bg-white flex flex-col justify-center items-center text-slate-600 text-xs relative"
+      >
+        <span
+          class="w-0 h-full bg-[rgba(0,0,0,0.3)] absolute group-hover:animate-[resNavAnim_0.3s_ease-in-out]"
+        ></span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-alarm-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"
+          />
+        </svg>
+        <span class="my-1 text-slate-900">خانه</span>
+      </a>
+    </div>
+
+    <!-- bottom_navigation -->
+
+    <script src="../script.js"></script>
+    <script src="../tabs.js"></script>
+    <script>
+            // count_down
+let  timer2=document.querySelectorAll('.timer');
+timer2.forEach(timer=>{
+    const spans=timer.querySelectorAll('span');
+    let hours=parseInt(spans[4].textContent)
+    let minutes=parseInt(spans[2].textContent)
+    let seconds=parseInt(spans[0].textContent)
+    let intervalId=setInterval(()=>{
+        seconds--;
+        if(seconds<0){
+            seconds=59;
+            minutes--; 
+            if(minutes<0){
+                minutes=59;
+                hours--;
+                if(hours<0){
+                    hours=0
+                    minutes=0
+                    seconds=0
+                    clearInterval(intervalId);
+                }
+            }
+        }
+        spans[4].textContent=String(hours).padStart(2,"0")
+        spans[2].textContent=String(minutes).padStart(2,"0")
+        spans[0].textContent=String(seconds).padStart(2,"0")
+    },1000)
+})
+
+// count_down
+
+
+
+// count
+let counterElement=document.querySelector('#counter')
+function increment(){
+let count=counterElement.textContent;
+count=parseInt(count)+1;
+counterElement.textContent=count
+}
+// count
+
+
+
+
+    </script>
+  </body>
+</html>
